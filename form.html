@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Simple Form</title>
+		<link rel="stylesheet" type="text/css" href="form.css">
+		<script src="form.js"></script>
+	</head>	
+	
+	<body>
+		<div class="header">
+		<h1> Contact Details<h1/>
+		</div >
+		
+		<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+			<fieldset>
+			<legend>Please fill out the following: </legend>
+			
+			First Name:<br>
+			<input type="text" name="fname"required placeholder="First Name*"  maxlength="30">
+			<br>
+			Last Name: <br>
+			<input type="text" name="lname"required placeholder="Last Name*" maxlength="30">
+			Phone Number: <br>
+			<input type="number" name="pnumber"required placeholder="Phone Number*" >
+			
+			<p>An email is required in order to receive an email confirmation.</p>
+			Valid Email Address: <br>
+			<input type="email" name="email"required placeholder="Valid Email Address*" maxlength="50">
+			Promo Code: <br>
+			<input type="text" name="promo" placeholder="Promo Code" maxlength="7">
+			<p> How did you hear about us?<p/>
+			<select name="options" id="options" onchange = "showfield(this.options[this.selectedIndex].value)">
+				<option selected="selected">Please select ...</option>
+				<option value="Social Media">Social Media</option>
+				<option value="From a Friend">From a Friend</option>
+				<option value="Email">Email</option>
+				<option value="Other">Other</option>
+			  </select>
+			  <div id="div1"></div>
+			 
+			If selected "Other", Please specify in the following text box. <br>
+			<input type="text" name="other" placeholder="" maxlength="50">
+			<p> Accept Terms & Conditions?<p/>
+			<input type="checkbox" name="terms"required value="Conditions"> "I agree to the terms and conditions of this event" 
+			<div style="overflow: scroll; width:400px; height: 200px;">
+				All cancellation requests must be received by March 1, 2022.
+				All cancellation requests are subject to a $100 cancellation fee.
+				No one under the age of 16 will be allowed on the show floor.
+			</div>
+			
+			
+			<br><br>
+			<input type="submit" value="Submit">
+			
+			</fieldset>
+		</form>
+		
+		
+		<div class = "footer">
+			<p>For assistance please call 555-5555 or email: <a href="test@test.com"> test@test.com</a>.</p>
+		</div>
+	
+	</body>
+</html> 
